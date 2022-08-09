@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+* {
+	box-sizing: border-box;
+/*	outline: solid 1px black;*/
+}
+
+body {
+	display: flex;
+	margin: 0;
+	min-height: 100vh;
+	max-width: 100vw;
+	position: relative;
+	background: #050801;
+	padding: 1rem;
+	font-family: "Raleway", sans-serif;
+}
+
+main {
+	width: 100%;
+	position: relative;
+}
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	padding-block: 6rem;
+}
+
+.content {
+	display: flex;
+	height: max-content;
+	width: max-content;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	row-gap: 6rem;
+}
+
+.content > a {
+	position: relative;
+	display: inline-block;
+	padding: 1.5rem 2rem;
+	font-weight: bold;
+	color: #03e9f4;
+	letter-spacing: 4px;
+	overflow: hidden;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.5s ease-in-out;
+}
+
+.content > a:nth-child(1) {
+	filter: hue-rotate(270deg);
+}
+
+.content > a:nth-child(2) {
+	filter: hue-rotate(110deg);
+}
+
+.content > a:hover {
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+	-webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  from {
+  	left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate2 {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+a span:nth-child(3) {
+	right: -100%;
+	bottom: 0;
+	height: 2px;
+	width: 100%;
+	background: linear-gradient(270deg, transparent, #03e9f4);
+	animation: animate3 1s linear infinite;
+	animation-delay: 1s;
+}
+
+@keyframes animate3 {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+a span:nth-child(4) {
+	left: 0;
+	bottom: -100%;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #03e9f4);
+	animation: animate4 1s linear infinite;
+	animation-delay: 1.5s;
+}
+
+@keyframes animate4 {
+	from {
+		bottom: -100%;
+	}
+	to {
+		bottom: 100%;
+	}
+}
+
+.attribution {
+	color: white;
+	min-width: 18rem;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	margin: 0.25rem;
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
